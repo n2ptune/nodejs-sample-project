@@ -5,5 +5,4 @@ COPY . .
 RUN npm install
 
 EXPOSE 5000
-
-ENTRYPOINT ["node", "index.js"]
+EXPOSE 8080
