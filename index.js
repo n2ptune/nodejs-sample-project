@@ -7,7 +7,7 @@ const mysql = require('mysql2')
 // 	port: 3306,
 // 	user: 'root',
 // 	database: 'khlee',
-// 	password: 'tlansdlek2@'
+// 	password: ''
 // })
 
 app.get('/', (req, res) => {
