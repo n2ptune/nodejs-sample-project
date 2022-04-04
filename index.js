@@ -11,7 +11,7 @@ const app = express()
 // })
 
 app.get('/', (req, res) => {
-	console.log(conn)
+//	console.log(conn)
 	res.send('Hello World rebuild')
 })
 
