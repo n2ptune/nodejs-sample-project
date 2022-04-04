@@ -3,11 +3,11 @@ const app = express()
 const mysql = require('mysql2')
 
 const conn = mysql.createConnection({
- 	host: 'mariadb-khlee.khlee.svc.cluster.local',
- 	port: 3306,
- 	user: 'root',
- 	database: 'khlee',
-	password: 'growth2014!'
+ 	host: process.env.DB_URL,
+ 	port: process.env.DB_PORT,
+ 	user: process.env.DB_USER,
+ 	database: process.env.DB_DATABASE,
+	password: process.env.DB_PW
 })
 
 app.get('/', (req, res) => {
@@ -16,5 +16,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(8080, '0.0.0.0', () => {
-	console.log(123)
+	console.log(process.env)
 })
