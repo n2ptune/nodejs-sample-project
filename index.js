@@ -1,17 +1,17 @@
 const express = require('express')
 const app = express()
-// const mysql = require('mysql2')
+const mysql = require('mysql2')
 
-// const conn = mysql.createConnection({
-// 	host: '10.131.0.89',
-// 	port: 3306,
-// 	user: 'root',
-// 	database: 'khlee',
-// 	password: 'growth2014!'
-// })
+const conn = mysql.createConnection({
+ 	host: 'mariadb-khlee.khlee.svc.cluster.local',
+ 	port: 3306,
+ 	user: 'root',
+ 	database: 'khlee',
+	password: 'growth2014!'
+})
 
 app.get('/', (req, res) => {
-//	console.log(conn)
+	console.log(conn)
 	res.send('Hello World rebuild')
 })
 
