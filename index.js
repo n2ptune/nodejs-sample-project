@@ -12,7 +12,7 @@ const conn = mysql.createConnection({
 
 app.get('/', (req, res) => {
 	console.log(conn)
-	res.send('Hello World')
+	res.send('Hello World rebuild')
 })
 
 app.listen(8080, '0.0.0.0', () => {
